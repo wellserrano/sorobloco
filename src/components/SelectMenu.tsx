@@ -1,15 +1,12 @@
 import React from 'react';
 import * as Select from '@radix-ui/react-select';
-import { CaretDown, IconProps } from 'phosphor-react';
+import { CaretDown } from 'phosphor-react';
 
-interface SelectMenuProps extends IconProps {
-  icon: IconProps
-}
 
-export function SelectMenu({icon:Icon} : SelectMenuProps) {
+export function SelectMenu({ children }) {
   return (
     <div className='flex justify-start items-center w-input h-input bg-input rounded-md pl-3.5 pr-1'>
-      <Icon size={24} color='#E45858'/>
+      { children }
       <Select.Root>
         <Select.Trigger 
           className='flex items-center justify-between gap-3 w-full h-full
